@@ -14,19 +14,16 @@ class Connexion_c extends MY_Controller{
 	
 	/*Vérifie les identifiants*/
 	public function connexion(){
-		if($this->visiteur_m->getInfosVisiteur($login, $mdp)){
+		if($this->visiteur_m->verifInfosVisiteur($login, $mdp)){
 			$this->initialiseSession();
 		}
-	}
+	}	
 	
 	private function initialiseSession(){
-		$data = array(
-				'idVisiteur' => 'id',
-				'nom' => 'nom',
-				'prenom' => 'prenom'
-		);
-		
+		$data = $this->visiteur_m->getInfoVisiteur();
 		$this->session->set_userdata($data);
+		echo $this->session->userdata('id');
+		echo $this->session->userdata('nom');
 	}
 	
 	/**utilise la fonction de destruction de la session active
@@ -36,7 +33,6 @@ class Connexion_c extends MY_Controller{
 		$this->session->sess_destroy();
 		/*redirige vers la page d'accueil*/
 		redirect('', 'refresh');
-		
 	}
 }
 /* End of file Connexion_c.php */

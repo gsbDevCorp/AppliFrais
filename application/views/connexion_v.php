@@ -6,7 +6,7 @@
       <h2>Identification de l'utilisateur</h2>
 </div> 
 <?php 
-	echo form_open();
+	echo form_open('Connexion_c/connexion');
 	$dataLogin = array(
 			'id' => 'login_txt',
 			'type' => 'text',

@@ -15,7 +15,7 @@ class Visiteur_m extends CI_Model {
 	 * @param $mdp
 	 * @return l'id, le nom et le prénom sous la forme d'un tableau associatif
 	 */
-	public function getInfosVisiteur($login, $mdp) {
+	public function verifInfosVisiteur($login, $mdp) {
 		$this->db->select('id, nom, prenom');
 		$this->db->where('login', $login);
 		$this->db->where('mdp', $mdp);
@@ -25,5 +25,13 @@ class Visiteur_m extends CI_Model {
 			return true;
 		}
 		return false;
+	}
+	
+	public function getInfosVisiteur(){
+		$this->db->select('id, nom, prenom');
+		$this->db->where('login', $login);
+		$this->db->where('mdp', $mdp);
+		$query = $this->db->get('visiteur');
+		return $query->result_array();
 	}
 }
