@@ -13,30 +13,29 @@ class Connexion_c extends MY_Controller{
 	}
 	
 	/*Vérifie les identifiants*/
-	public function valideConnexion(){
-	
-		$visiteur = $this->visiteur_m->getInfosVisiteur($login, $mdp);
-		
-		if(!is_array($visiteur)){
-			ajouterErreur("Login ou mot de passe incorrect");
-			$data['content'] = 'connexion_v';
-			$this->generer_affichage($data);
+	public function connexion(){
+		if($this->visiteur_m->getInfosVisiteur($login, $mdp)){
+			$this->initialiseSession();
 		}
-		else{
-			$id = $visiteur['id'];
-			$nom =  $visiteur['nom'];
-			$prenom = $visiteur['prenom'];
-			connecter($id,$nom,$prenom);
-			$this->load->view("includes/sommaire");
-		}	
+	}
+	
+	private function initialiseSession(){
+		$data = array(
+				'idVisiteur' => 'id',
+				'nom' => 'nom',
+				'prenom' => 'prenom'
+		);
+		
+		$this->session->set_userdata($data);
 	}
 	
 	/**utilise la fonction de destruction de la session active
 	 * Location : ./application/helpers/gsb_helper.php
 	*/
 	public function deconnexion(){
-		
-		$this->gsb->deconnecter();
+		$this->session->sess_destroy();
+		/*redirige vers la page d'accueil*/
+		redirect('', 'refresh');
 		
 	}
 }

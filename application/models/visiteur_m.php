@@ -11,7 +11,6 @@ class Visiteur_m extends CI_Model {
 
 	/**
 	 * Retourne les informations d'un visiteur
-	
 	 * @param $login
 	 * @param $mdp
 	 * @return l'id, le nom et le prénom sous la forme d'un tableau associatif
@@ -21,6 +20,10 @@ class Visiteur_m extends CI_Model {
 		$this->db->where('login', $login);
 		$this->db->where('mdp', $mdp);
 		$query = $this->db->get('visiteur');
-		return $query->result_array();
+		/*compte le nombre de ligne récupérés par la BDD*/
+		if ($query->num_rows() > 0){
+			return true;
+		}
+		return false;
 	}
 }

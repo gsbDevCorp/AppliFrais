@@ -11,22 +11,24 @@
 			'id' => 'login_txt',
 			'type' => 'text',
 			'size' => "30", 
-			'maxlength' => "45"
+			'maxlength' => "45",
+			'placeholder' => "Nom d'utilisateur"
 	);
-	echo form_label('Login*', 'login_txt', $dataLogin);
+	echo form_label('', 'login_txt', $dataLogin);
 	echo form_input($dataLogin) . br();
 	
 	$dataMdp = array(
 			'id' => 'mdp_passwd',
 			'type' => 'password',
 			'size' => "30",
-			'maxlength' => "45"
+			'maxlength' => "45",
+			'placeholder' => "Mot de passe"
 	);
-	echo form_label('Mot de passe*', 'mdp_passwd', $dataMdp);
+	echo form_label('', 'mdp_passwd', $dataMdp);
 	echo form_input($dataMdp).br();
 	
-	echo form_submit("subCnx", "Envoyer");
-	echo form_reset("restCnx","Annuler").br();
+	echo form_submit("subForm", "Envoyer");
+	echo form_reset("restForm","Annuler").br();
 	
 	echo form_close();
 ?>
