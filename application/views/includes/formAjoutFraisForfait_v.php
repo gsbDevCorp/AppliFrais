@@ -29,5 +29,7 @@
 	echo form_input($dataForm['fraisKm_double']).br();
 	echo form_input($dataForm['nuitHotel_double']).br();
 	echo form_input($dataForm['repasRest_double']).br();
+	echo form_submit('subFormFraisForfait','Valider');
+	echo form_reset('reset','Effacer');
 	echo form_close();
 ?>
