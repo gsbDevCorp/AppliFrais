@@ -5,7 +5,6 @@ class Connexion_c extends MY_Controller{
 	
 	public function __construct(){
 		parent::__construct();
-		$this->load->model("visiteur_m");
 	}
 	
 	public function index(){
@@ -13,6 +12,7 @@ class Connexion_c extends MY_Controller{
 		$this->generer_affichage($data);
 	}
 	
+	/*Vérifie les identifiants*/
 	public function valideConnexion(){
 	
 		$visiteur = $this->visiteur_m->getInfosVisiteur($login, $mdp);
@@ -31,15 +31,14 @@ class Connexion_c extends MY_Controller{
 		}	
 	}
 	
+	/**utilise la fonction de destruction de la session active
+	 * Location : ./application/helpers/gsb_helper.php
+	*/
 	public function deconnexion(){
-		/**utilise la fonction de destruction de la session active
-		 * Location : ./application/helpers/gsb_helper.php
-		 */
+		
 		$this->gsb->deconnecter();
 		
 	}
 }
-
-
 /* End of file Connexion_c.php */
 /* Location: ./application/controllers/Connexion_c.php */
