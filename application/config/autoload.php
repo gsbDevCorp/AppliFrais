@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('visiteur_m', 'ligneFraisForfait_m', 'ligneFraisHorsForfait_m');
+$autoload['model'] = array('visiteur_m', 'ligneFraisForfait_m', 'ligneFraisHorsForfait_m', 'ficheFrais_m');
 
 
 /* End of file autoload.php */

@@ -1,8 +1,8 @@
-<h2>Descriptif des éléments hors forfait :</h2>
+<h2>Descriptif des Ã©lÃ©ments hors forfait :</h2>
 
 <?php
 
-	//----- initialisation des données du formulaire
+	//----- initialisation des donnï¿½es du formulaire
 	$dataForm['dateFraisHF_date'] = array(
 			'name' => 'dateFraisHF_date',
 			'id' => 'dateFraisHF_date',
@@ -11,7 +11,7 @@
 	$dataForm['libelleFraisHF_txt'] = array(
 			'name' => 'libelleFraisHF_txt',
 			'id' => 'libelleFraisHF_txt',
-			'placeholder' => 'Libellé'
+			'placeholder' => 'LibellÃ©'
 	);
 	$dataForm['montantFraisHF_double'] = array(
 			'name' => 'montantFraisHF_double',

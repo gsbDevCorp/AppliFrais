@@ -1,22 +1,22 @@
-<h2>Éléments forfaitisés :</h2>
+<h2>Ã‰lÃ©ments forfaitisÃ©s :</h2>
 
 <?php
 
-	//----- initialisation des données du formulaire
+	//----- initialisation des donnï¿½es du formulaire
 	$dataForm['forfaitEtape_double'] = array(
 			'name' => 'forfaitEtape_double',
 			'id' => 'forfaitEtape_double',
-			'placeholder' => 'Forfait étape'
+			'placeholder' => 'Forfait Ã©tape'
 	);
 	$dataForm['fraisKm_double'] = array(
 			'name' => 'fraisKm_double',
 			'id' => 'fraisKm_double',
-			'placeholder' => 'Frais kilométriques'
+			'placeholder' => 'Frais kilomÃ©triques'
 	);
 	$dataForm['nuitHotel_double'] = array(
 			'name' => 'nuitHotel_double',
 			'id' => 'nuitHotel_double',
-			'placeholder' => 'Nuitée hôtel'
+			'placeholder' => 'NuitÃ©e hÃ´tel'
 	);
 	$dataForm['repasRest_double'] = array(
 			'name' => 'repasRest_double',

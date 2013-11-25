@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Classe d'accès aux données des frais forfaits
+ * Classe d'accÃ¨s aux donnÃ©es des frais forfaits
  */
 class LigneFraisForfait_m extends CI_Model {
 	
