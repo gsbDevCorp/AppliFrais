@@ -2,7 +2,7 @@
 
 <?php
 
-	//----- initialisation des donn�es du formulaire
+	//----- initialisation des données du formulaire
 	$dataForm['dateFraisHF_date'] = array(
 			'name' => 'dateFraisHF_date',
 			'id' => 'dateFraisHF_date',

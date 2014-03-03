@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Classe d'accès aux données des frais hors forfaits
+ * Classe d'accï¿½s aux donnï¿½es des frais hors forfaits
  */
 class LigneFraisHorsForfait_m extends CI_Model {
 	
@@ -11,5 +11,17 @@ class LigneFraisHorsForfait_m extends CI_Model {
 	
 	public function ajouteFraisHorsForfait($data) {
 		$this->db->insert('lignefraishorsforfait', $data);
+	}
+	
+	public function countFraisHorsForfaitMensuels($mois,$idVisiteur) {
+		$this->db->where('mois',$mois);
+		$this->db->where('idVisiteur',$idVisiteur);
+		return $this->db->count_all_results('lignefraishorsforfait');
+		
+	}
+	public function getFraisHorsForfaitMensuels($mois,$idVisiteur) {
+		$this->db->where('mois',$mois);
+		$this->db->where('idVisiteur',$idVisiteur);
+		return $this->db->get('lignefraishorsforfait');
 	}
 }

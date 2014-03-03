@@ -15,4 +15,13 @@ class FicheFrais_m extends CI_Model {
 		$query = $this->db->get('fichefrais');
 		return $query;
 	}
+	
+	public function getEtatFiche($mois,$idVisiteur) {
+		$this->db->select('libelle, montantValide');
+		$this->db->from('etat');
+		$this->db->join('fichefrais', 'fichefrais.idEtat = etat.id');
+		$this->db->where('mois',$mois);
+		$this->db->where('idVisiteur',$idVisiteur);
+		return $this->db->get();
+	}
 }

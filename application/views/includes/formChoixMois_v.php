@@ -2,7 +2,7 @@
 
 <?php
 
-	//----- initialisation des donn�es du formulaire
+	//----- initialisation des données du formulaire
 	$dataForm['mois_dropdown'] = array(
 			'name' => 'mois_dropdown',
 			'id' => 'mois_dropdown'
