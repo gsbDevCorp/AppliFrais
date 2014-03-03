@@ -25,4 +25,8 @@ class FicheFrais_m extends CI_Model {
 		$this->db->where('idVisiteur',$idVisiteur);
 		return $this->db->get();
 	}
+	
+	/**
+	 * @todo insertion hors forfait
+	 */
 }

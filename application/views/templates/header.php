@@ -22,9 +22,8 @@
 					?>
 						<p>
 							Visiteur : <br/>
-							<?php echo $this->session->userdata('nom').' '.$this->session->userdata('prenom'); ?>
-							<br />
 							<?php 
+								echo $this->session->userdata('nom').' '.$this->session->userdata('prenom').br(2);
 								echo anchor('gererFrais_c','Saisie fiche de frais').br();
 								echo anchor('EtatFrais_c','Mes fiches de frais').br();
 								echo anchor('Connexion_c/deconnexion','Déconnexion');

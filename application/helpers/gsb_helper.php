@@ -5,6 +5,8 @@
 	/**
 	 * Retourne le mois et l'année en cours
 	 * au format mm-aaaa
+	 * 
+	 * @return String
 	 */
 	function getMoisAnnee() {
 		return mdate("%m-%Y", time());
@@ -12,6 +14,9 @@
 	
 	/**
 	 * Retourne une date du format jj/mm/aaaa au format aaaa-mm-jj
+	 * 
+	 * @param String $date
+	 * @return String
 	 */
 	function dateToUS($date) {
 		$dateUS = mbsplit('/', $date);
@@ -20,6 +25,9 @@
 	
 	/**
 	 * Retourne une date du format aaaamm au format mm/aaaa
+	 * 
+	 * @param String $date
+	 * @return String
 	 */
 	function dateDBToHuman($date) {
 		$annee = substr($date,0,4);
@@ -30,6 +38,8 @@
 	/**
 	 * Retourne le mois et l'année en cours
 	 * au format mm/aaaa
+	 * 
+	 * @return String
 	 */
 	function dateActuelleToHuman() {
 		return mdate("%m/%Y", time());
@@ -37,6 +47,9 @@
 	
 	/**
 	 * Retourne une date du format mm/aaaa au format aaaamm
+	 * 
+	 * @param String date
+	 * @return String
 	 */
 	function dateHumanToDB($date) {
 		$annee = substr($date,3,7);
