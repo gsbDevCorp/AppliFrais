@@ -36,6 +36,18 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/*
+|
+|--------------------------------------------------------------------------
+| Assets Configuration
+|--------------------------------------------------------------------------
+|
+| These modes are used for the assets configuration
+|
+*/
+$basepath = 'http://localhost/AppliFrais/';
+define('A_CSS', $basepath.'assets/css/');
+define('A_IMG', $basepath.'assets/img/');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

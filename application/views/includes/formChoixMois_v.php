@@ -2,13 +2,16 @@
 
 <?php
 
-	//----- initialisation des donn�es du formulaire
+	//----- initialisation des données du formulaire
 	$dataForm['mois_dropdown'] = array(
 			'name' => 'mois_dropdown',
 			'id' => 'mois_dropdown'
 	);
+	$options = array('-1' => 'Choisir');
 	foreach ($mois_bdd->result() as $row) {
-		$options[] = array(dateDBToHuman($row->mois) => dateDBToHuman($row->mois));
+		$options += array(
+				dateDBToHuman($row->mois) => dateDBToHuman($row->mois)
+		);
 	}
 	//----- Affichage du formulaire
 	echo form_open('EtatFrais_c/afficherMois');
@@ -17,3 +20,4 @@
 	echo form_reset('reset','Effacer');
 	echo form_close();
 ?>
+<hr />

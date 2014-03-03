@@ -2,7 +2,7 @@
 
 <?php
 
-	//----- initialisation des donn�es du formulaire
+	//----- initialisation des données du formulaire
 	$dataForm['forfaitEtape_double'] = array(
 			'name' => 'forfaitEtape_double',
 			'id' => 'forfaitEtape_double',
