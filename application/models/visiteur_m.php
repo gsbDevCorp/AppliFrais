@@ -10,7 +10,7 @@ class Visiteur_m extends CI_Model {
 	
 	/**
 	 * Retourne les informations d'un visiteur
-	 * 
+	 *
 	 * @param
 	 *        	$login
 	 * @param

@@ -1,4 +1,5 @@
 <?php
+
 if (! defined ( 'BASEPATH' ))
 	exit ( 'No direct script access allowed' );
 class Connexion_c extends MY_Controller {
@@ -12,7 +13,7 @@ class Connexion_c extends MY_Controller {
 	
 	/* Vérifie les identifiants */
 	public function connexion() {
-		if ($this->visiteur_m->verifInfosVisiteur ( $login, $mdp )) {
+		if ($this->visiteur_m->verifInfosVisiteur($login, $mdp)) {
 			$this->initialiseSession ();
 		}
 	}
@@ -26,7 +27,6 @@ class Connexion_c extends MY_Controller {
 	/**
 	 * utilise la fonction de destruction de la session active
 	 * Location : .
-	 *
 	 * /application/helpers/gsb_helper.php
 	 */
 	public function deconnexion() {
