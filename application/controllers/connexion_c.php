@@ -1,7 +1,6 @@
-<?php
+<?php if (! defined ( 'BASEPATH' )) exit ( 'No direct script access allowed' );
 
-if (! defined ( 'BASEPATH' ))
-	exit ( 'No direct script access allowed' );
+
 class Connexion_c extends MY_Controller {
 	public function __construct() {
 		parent::__construct ();
@@ -11,17 +10,21 @@ class Connexion_c extends MY_Controller {
 		$this->generer_affichage ( $data );
 	}
 	
-	/* Vérifie les identifiants */
+	/* VÃ©rifie les identifiants */
 	public function connexion() {
+		$login = $this->input->post('login_txt');
+		$mdp = $this->input->post('mdp_passwd');
 		if ($this->visiteur_m->verifInfosVisiteur($login, $mdp)) {
-			$this->initialiseSession ();
+			$this->initialiseSession ($login,$mdp);
 		}
 	}
-	private function initialiseSession() {
-		$data = $this->visiteur_m->getInfoVisiteur ();
-		$this->session->set_userdata ( $data );
-		echo $this->session->userdata ( 'id' );
-		echo $this->session->userdata ( 'nom' );
+	private function initialiseSession($login,$mdp) {
+		$data = $this->visiteur_m->getInfosVisiteur($login,$mdp);
+		foreach($data->result() as $row) {
+			$this->session->set_userdata('id',$row->id);
+			$this->session->set_userdata('nom',$row->nom);
+			$this->session->set_userdata('prenom',$row->prenom);
+		}
 	}
 	
 	/**

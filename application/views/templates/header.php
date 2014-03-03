@@ -19,7 +19,7 @@
 				<div class="navigation">
 					<p>
 						Visiteur : <br/>
-						<?php echo $this->session->userdata('nom'); ?>
+						<?php echo $this->session->userdata('nom').' '.$this->session->userdata('prenom'); ?>
 						<br />
 						<?php 
 							echo anchor('#','Saisie fiche de frais').br();
