@@ -1,13 +1,13 @@
 <h2>Fiche de frais du mois <?php echo dateDBToHuman($mois);?> :</h2>
 
 <p>
-	Etat : <?php echo $etatFiche; ?>
+	<span class="info">Etat :</span> <?php echo $etatFiche; ?>
 	<br/>
-	Montant validé : <?php echo $montantValide; ?> €
+	<span class="info">Montant validé :</span> <?php echo $montantValide; ?> €
 </p>
 
 <!-- Elements forfaitisés -->
-<h3>Eléments forfaitisés</h3>
+<h2>Eléments forfaitisés :</h2>
 <table>
 	<tr>
 		<th>Forfait Etape</th>

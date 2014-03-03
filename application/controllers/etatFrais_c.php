@@ -13,7 +13,6 @@
 class EtatFrais_c extends MY_Controller {
 	public function __construct() {
 		parent::__construct();
-		$this->session->set_userdata('id','a131');
 	}
 	
 	/**

@@ -17,3 +17,4 @@
 	echo form_reset('reset','Effacer');
 	echo form_close();
 ?>
+<hr />

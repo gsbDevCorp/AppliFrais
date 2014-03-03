@@ -1,0 +1,117 @@
+/*General*/
+
+body, html {
+	/*Reset*/
+	margin: 0;
+	padding: 0;
+	
+	/*General*/
+	background-color: rgb(119,170,221);
+}
+hr {
+	color: rgb(119,170,221);
+}
+
+.info {
+	color: #6988BE;
+}
+/*Container*/
+
+.container{
+	width: 1000px;
+	border: 2px solid rgb(0,0,0);
+	margin: auto;
+	margin-top: 30px;
+	background-color: rgb(255,255,255);
+}
+
+/*Content Wrap*/
+
+.contentWrap {
+	padding: 5px;
+	height: 100%;
+}
+
+/*Header*/
+
+.header {
+	height: 122px;
+	background-color: rgb(72,198,236);
+	border-bottom: 1px solid rgb(0,0,0);
+}
+.header h1 {
+	position: relative;
+	bottom: 100px;
+	left: 350px;
+	color: rgb(152,1,1);
+}
+.header img {
+	border-right: 1px solid rgb(0,0,0);
+}
+
+/*Navigation*/
+
+.navigation {
+	width: 180px;
+	float: left;
+	padding-left: 10px;
+	color: #0055E3;
+}
+.navigation a {
+	text-decoration: none;
+	color: #0055E3;
+}
+.navigation a:hover {
+	text-decoration: underline;
+	color: rgb(119,170,221);
+}
+
+/*Content page*/
+
+.contentPage {
+	
+	/*General*/
+	width: 780px;
+	margin-left: 180px;
+	padding-left: 20px;
+	
+	/*Bordure*/
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #980101;
+    border-image: none;
+    border-style: none none none groove;
+    border-width: medium medium medium 0.8em;
+}
+
+/*Titres*/
+
+.contentPage h1 {
+	background-color: #E9F1FE;
+	border: 1px solid #6988BE;
+	padding: 5px;
+	font-size: 25px;
+}
+.contentPage h2 {
+	font-size: 20px;
+	color: #6988BE;
+}
+
+/*Tableaux*/
+
+.contentPage table {
+	border-collapse: collapse;
+}
+.contentPage table th, .contentPage table td {
+	padding: 10px;
+}
+.contentPage table th {
+	background-color: #E9F1FE;
+	border: 1px solid #6988BE;
+}
+.contentPage table td {
+	border: 1px solid #6988BE;
+}
