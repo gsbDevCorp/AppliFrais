@@ -15,7 +15,7 @@ class Connexion_c extends MY_Controller {
 		$login = $this->input->post('login_txt');
 		$mdp = $this->input->post('mdp_passwd');
 		if ($this->visiteur_m->verifInfosVisiteur($login, $mdp)) {
-			$this->initialiseSession ($login,$mdp);
+			$this->initialiseSession($login,$mdp);
 		}
 	}
 	private function initialiseSession($login,$mdp) {
