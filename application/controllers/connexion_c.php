@@ -16,6 +16,11 @@ class Connexion_c extends MY_Controller {
 		$mdp = $this->input->post('mdp_passwd');
 		if ($this->visiteur_m->verifInfosVisiteur($login, $mdp)) {
 			$this->initialiseSession($login,$mdp);
+		
+		/*afin de booter sur une certaine page après connection*/
+		echo '<meta http-equiv="refresh" content="0;URL=../EtatFrais_c">';
+		/*afin de booter sur la même page après connection*/
+		/*redirect ( '', 'refresh' );*/
 		}
 	}
 	private function initialiseSession($login,$mdp) {
