@@ -14,7 +14,8 @@ $dataLogin = array (
 		'type' => 'text',
 		'size' => "30",
 		'maxlength' => "45",
-		'placeholder' => "Nom d'utilisateur"
+		'placeholder' => "Nom d'utilisateur",
+		'required' => 'required'
 );
 echo form_label( '', 'login_txt', $dataLogin );
 echo form_input( $dataLogin ) . br ();
@@ -25,7 +26,8 @@ $dataMdp = array (
 		'type' => 'password',
 		'size' => "30",
 		'maxlength' => "45",
-		'placeholder' => "Mot de passe" 
+		'placeholder' => "Mot de passe",
+		'required' => 'required'
 );
 echo form_label( '', 'mdp_passwd', $dataMdp );
 echo form_input( $dataMdp ) . br ();
