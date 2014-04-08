@@ -1,6 +1,15 @@
 <?php if (! defined ( 'BASEPATH' )) exit ( 'No direct script access allowed' );
 
-
+/**
+ * Controleur de la connexion
+ * IntÃ¨gre les fonctions permettant d'initialiser la connexion, de se connecter et de se deconnecter
+ *
+ * @author Chafik DAGGAG
+ *
+ * @name connexion_c
+ * @namespace Controllers
+ *
+ */
 class Connexion_c extends MY_Controller {
 	public function __construct() {
 		parent::__construct ();
@@ -10,19 +19,28 @@ class Connexion_c extends MY_Controller {
 		$this->generer_affichage ( $data );
 	}
 	
-	/* VÃ©rifie les identifiants */
+	/**
+	 * VÃ©rification des identifiants et redirection
+	 */
 	public function connexion() {
 		$login = $this->input->post('login_txt');
 		$mdp = $this->input->post('mdp_passwd');
 		if ($this->visiteur_m->verifInfosVisiteur($login, $mdp)) {
 			$this->initialiseSession($login,$mdp);
 		
-		/*afin de booter sur une certaine page après connection*/
+		/*afin de booter sur une certaine page aprÃ¨s connexion*/
 		echo '<meta http-equiv="refresh" content="0;URL=../EtatFrais_c">';
-		/*afin de booter sur la même page après connection*/
-		/*redirect ( '', 'refresh' );*/
+		}
+		else{
+			redirect ( '', 'refresh' );
 		}
 	}
+	/**
+	 * Initialise la session
+	 * 
+	 * @param unknown $login
+	 * @param unknown $mdp
+	 */
 	private function initialiseSession($login,$mdp) {
 		$data = $this->visiteur_m->getInfosVisiteur($login,$mdp);
 		foreach($data->result() as $row) {
@@ -34,8 +52,7 @@ class Connexion_c extends MY_Controller {
 	
 	/**
 	 * utilise la fonction de destruction de la session active
-	 * Location : .
-	 * /application/helpers/gsb_helper.php
+	 * Location : ../application/helpers/gsb_helper.php
 	 */
 	public function deconnexion() {
 		$this->session->sess_destroy ();

@@ -14,7 +14,7 @@ $dataLogin = array (
 		'type' => 'text',
 		'size' => "30",
 		'maxlength' => "45",
-		'placeholder' => "Nom d'utilisateur" 
+		'placeholder' => "Nom d'utilisateur"
 );
 echo form_label( '', 'login_txt', $dataLogin );
 echo form_input( $dataLogin ) . br ();

@@ -1,8 +1,20 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/**
+ * Controleur des fiches de frais
+ * Intègre les fonctions permettant de visualiser les fiches saisies
+ *
+ * @author Chafik DAGGAG
+ * @author Robin BILLY
+ *
+ * @name EtatFrais_c
+ * @namespace Controllers
+ *
+ */
 
 	class GererFrais_c extends MY_Controller {
 		public function __construct() {
 			parent::__construct();
+			parent::checkSession();
 		}
 		
 		public function index() {

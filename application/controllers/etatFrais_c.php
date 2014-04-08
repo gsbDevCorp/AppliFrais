@@ -4,6 +4,7 @@
  * Controleur des fiches de frais
  * Intègre les fonctions permettant de visualiser les fiches saisies
  * 
+ * @author Chafik DAGGAG
  * @author Robin BILLY
  * 
  * @name EtatFrais_c
@@ -13,6 +14,7 @@
 class EtatFrais_c extends MY_Controller {
 	public function __construct() {
 		parent::__construct();
+		parent::checkSession();
 	}
 	
 	/**
