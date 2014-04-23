@@ -10,7 +10,8 @@ class LigneFraisHorsForfait_m extends CI_Model {
 	}
 	
 	public function ajouteFraisHorsForfait($data) {
-		$this->db->insert('lignefraishorsforfait', $data);
+		/*$this->db->insert('lignefraishorsforfait', $data);*/
+		$this->db->update('lignefraishorsforfait', $data);
 	}
 	
 	public function countFraisHorsForfaitMensuels($mois,$idVisiteur) {

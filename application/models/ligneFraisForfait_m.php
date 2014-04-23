@@ -13,7 +13,8 @@ class LigneFraisForfait_m extends CI_Model {
 	}
 	
 	public function ajouteFraisForfait($data) {
-		$this->db->insert($this->dbPath, $data); 
+		/*$this->db->insert($this->dbPath, $data); */
+		$this->db->update($this->dbPath, $data);
 	}
 	
 	public function getFraisMensuels($mois,$idVisiteur) {
